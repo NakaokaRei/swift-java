@@ -270,7 +270,7 @@ extension JNISwift2JavaGenerator {
     if decl.parent != nil {
       modifiers.append("static")
     }
-    modifiers.append("open")
+    // modifiers.append("final")
     var implements = ["JNISwiftInstance"]
     implements += decl.inheritedTypes
       .compactMap(\.asNominalTypeDeclaration)
